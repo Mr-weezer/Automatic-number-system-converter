@@ -11,20 +11,28 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:automatic_number_system_converter/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Number converter smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(NumberConverterApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that the app title is present.
+    expect(find.text('Number System Converter'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // Verify initial state of outputs.
+    expect(find.text('Binary: '), findsOneWidget);
+    expect(find.text('Octal: '), findsOneWidget);
+    expect(find.text('Decimal: '), findsOneWidget);
+    expect(find.text('Hexadecimal: '), findsOneWidget);
+
+    // Enter a number and convert.
+    await tester.enterText(find.byType(TextField), '10');
+    await tester.tap(find.byIcon(Icons.swap_horiz));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify conversion results.
+    expect(find.text('Binary: 1010'), findsOneWidget);
+    expect(find.text('Octal: 12'), findsOneWidget);
+    expect(find.text('Decimal: 10'), findsOneWidget);
+    expect(find.text('Hexadecimal: A'), findsOneWidget);
   });
 }

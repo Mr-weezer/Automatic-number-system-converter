@@ -7,6 +7,7 @@ class NumberConverterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Number System Converter',
+      theme: ThemeData.dark(), // Apply dark theme for overall black background
       home: ConverterScreen(),
       debugShowCheckedModeBanner: false,
     );
@@ -56,32 +57,132 @@ class _ConverterScreenState extends State<ConverterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Number System Converter')),
+      appBar: AppBar(
+        title: Text('Number System Converter'),
+        backgroundColor: Colors.black87, // Darker app bar for consistency
+      ),
+      backgroundColor: Colors.black, // Explicit black background
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(labelText: 'Enter Number'),
-              keyboardType: TextInputType.text,
+            Card(
+              color: Colors.grey[900], // Dark card for input
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: _controller,
+                  decoration: InputDecoration(
+                    labelText: 'Enter Number',
+                    labelStyle: TextStyle(color: Colors.white),
+                    border: OutlineInputBorder(),
+                  ),
+                  style: TextStyle(color: Colors.white),
+                  keyboardType: TextInputType.text,
+                ),
+              ),
             ),
-            DropdownButton<String>(
-              value: _selectedBase,
-              onChanged: (value) => setState(() => _selectedBase = value!),
-              items: ['Binary', 'Decimal', 'Octal', 'Hexadecimal']
-                  .map((base) => DropdownMenuItem(
-                        value: base,
-                        child: Text(base),
-                      ))
-                  .toList(),
+            SizedBox(height: 10),
+            Card(
+              color: Colors.grey[900],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: DropdownButton<String>(
+                  value: _selectedBase,
+                  dropdownColor: Colors.grey[900],
+                  style: TextStyle(color: Colors.white),
+                  onChanged: (value) => setState(() => _selectedBase = value!),
+                  items: [
+                    DropdownMenuItem(
+                      value: 'Binary',
+                      child: Row(
+                        children: [
+                          Icon(Icons.code, color: Colors.blue),
+                          SizedBox(width: 10),
+                          Text('Binary'),
+                        ],
+                      ),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Decimal',
+                      child: Row(
+                        children: [
+                          Icon(Icons.looks_one, color: Colors.green),
+                          SizedBox(width: 10),
+                          Text('Decimal'),
+                        ],
+                      ),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Octal',
+                      child: Row(
+                        children: [
+                          Icon(Icons.looks_two, color: Colors.orange),
+                          SizedBox(width: 10),
+                          Text('Octal'),
+                        ],
+                      ),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Hexadecimal',
+                      child: Row(
+                        children: [
+                          Icon(Icons.looks_3, color: Colors.purple),
+                          SizedBox(width: 10),
+                          Text('Hexadecimal'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
-            ElevatedButton(onPressed: convertNumber, child: Text('Convert')),
             SizedBox(height: 20),
-            Text('Binary: $binary'),
-            Text('Octal: $octal'),
-            Text('Decimal: $decimal'),
-            Text('Hexadecimal: $hex'),
+            ElevatedButton.icon(
+              onPressed: convertNumber,
+              icon: Icon(Icons.swap_horiz),
+              label: Text('Convert'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
+            ),
+            SizedBox(height: 20),
+            Expanded(
+              child: ListView(
+                children: [
+                  Card(
+                    color: Colors.grey[900],
+                    child: ListTile(
+                      leading: Icon(Icons.code, color: Colors.blue),
+                      title: Text('Binary: $binary', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                  Card(
+                    color: Colors.grey[900],
+                    child: ListTile(
+                      leading: Icon(Icons.looks_two, color: Colors.orange),
+                      title: Text('Octal: $octal', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                  Card(
+                    color: Colors.grey[900],
+                    child: ListTile(
+                      leading: Icon(Icons.looks_one, color: Colors.green),
+                      title: Text('Decimal: $decimal', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                  Card(
+                    color: Colors.grey[900],
+                    child: ListTile(
+                      leading: Icon(Icons.looks_3, color: Colors.purple),
+                      title: Text('Hexadecimal: $hex', style: TextStyle(color: Colors.white)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
