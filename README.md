@@ -12,7 +12,7 @@ This project was developed by a group of five Computer Science students
 |------|----------|
 | JOEL KESIS | CT101/G/21476/24 |
 | PAUL MUNGAI | CT101/G/23420/24 |
-| FRANCIS MWIGA |  CT101/G/21476/24|
+| FRANCIS MWIGA |  CT101/G/22131/24|
 | MATIVO BRIAN | CT101/G/22118/24 |
 | BEATRICE MUTHEU| CT101/G/21476/24|
 
