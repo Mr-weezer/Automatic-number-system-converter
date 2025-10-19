@@ -10,11 +10,11 @@ It automates conversions between different number systems — **Binary, Decimal,
 This project was developed by a group of five Computer Science students 
 | NAME| REGISTARTION NUMBER |
 |------|----------|
-| FRANCIS MWIGA | CT101/G/22131/24 |
-| PAUL MUNGAI |  |
-| JOEL |  |
-| MATIVO |  |
-| BETTY |  |
+| JOEL KESIS | CT101/G/21476/24 |
+| PAUL MUNGAI | CT101/G/23420/24 |
+| FRANCIS MWIGA |  CT101/G/21476/24|
+| MATIVO BRIAN | CT101/G/22118/24 |
+| BEATRICE MUTHEU| CT101/G/21476/24|
 
 ---
 
@@ -65,8 +65,8 @@ Input: 1010 (Binary)
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/Mr-weezer/automatic_number-system-converter.git
-cd automatic_number-system-converter
+git clone https://github.com/Mr-weezer/Automatic_number-system-converter.git
+cd Automatic_number-system-converter
 
 2️⃣ Install dependencies
 flutter pub get
@@ -106,16 +106,17 @@ lib/
 
 👥 Contributors
 Name	Role
-Joel Mnga	Developer / UI Designer
-Mativo	Developer / Logic Implementation
+JOEL  Developer(Leader)
+MUNGAI	Developer
+MWIGA   Developer
+MATIVO  Developer
+BEATRICE  Developer
 (Add other members here)	Testing / Documentation / Code Review
 🚀 Future Improvements
 
 Add voice input for spoken number conversion
 
 Include conversion history log
-
-Add light/dark mode toggle
 
 Support for Roman numerals and other systems
 
@@ -126,7 +127,7 @@ It serves as both an educational tool and a practical utility for computer scien
 
 📎 Repository Link
 
-🔗 https://github.com/Mr-weezer/automatic_number-system-converter
+🔗 https://github.com/Mr-weezer/Automatic_number-system-converter
 
 📜 License
 
