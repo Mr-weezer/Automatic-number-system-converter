@@ -111,7 +111,7 @@ MUNGAI	Developer
 MWIGA   Developer
 MATIVO  Developer
 BEATRICE  Developer
-(Add other members here)	Testing / Documentation / Code Review
+LLMWAI LECTURER 
 🚀 Future Improvements
 
 Add voice input for spoken number conversion
