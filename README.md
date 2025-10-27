@@ -38,10 +38,10 @@ The app simplifies mathematical conversions, reduces user errors, and enhances u
 | Tool | Purpose |
 |------|----------|
 | **Flutter (Dart)** | Cross-platform development |
-| **Android Studio / VS Code** | IDE for development |
+| **VS Code** | IDE for development |
 | **Git & GitHub** | Version control and collaboration |
 | **Flutter DevTools** | Debugging and testing |
-| **Xcode (for iOS builds)** | iOS compilation and deployment |
+| **Github workflows (for iOS and Apk builds)** | iOS and Apk compilation and deployment |
 
 ---
 
