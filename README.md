@@ -10,7 +10,7 @@ It automates conversions between different number systems — **Binary, Decimal,
 This project was developed by a group of five Computer Science students 
 | NAME| REGISTARTION NUMBER |
 |------|----------|
-| JOEL KESIS | CT101/G/21476/24 |
+| JOEL KESIS | CT101/G/21565/24 |
 | PAUL MUNGAI | CT101/G/23420/24 |
 | FRANCIS MWIGA |  CT101/G/22131/24|
 | MATIVO BRIAN | CT101/G/22118/24 |
