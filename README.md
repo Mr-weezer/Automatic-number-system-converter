@@ -106,8 +106,8 @@ lib/
 
 👥 Contributors
 Name	Role
-JOEL  Developer(Leader)
-MUNGAI	Developer
+JOEL  Developer(co-Leader)
+MUNGAI	Developer(leader)
 MWIGA   Developer
 MATIVO  Developer
 BEATRICE  Developer
